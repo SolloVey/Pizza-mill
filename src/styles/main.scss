@@ -1,11 +1,10 @@
 // ПЕРЕМЕННЫЕ
 
-$font-ralevay: 'Raleway', sans-serif;
-$font-bitter: 'Bitter', serif;
-$container-width: 1180px;
+$font-manrope: 'Manrope', sans-serif;
+$font-color: #420F04;
+$font-colorGrey: #828D9E;
+$container-width: 1390px;
 $container-padding: 15px;
-$background-substrate: #f7f9fa;
-$font-color: #1d2f38;
 
 $r_desk_4k: 3760px;
 $r_desk_2k: 2560px;
@@ -25,3 +24,118 @@ $r_mob_460: 460px;
 $r_mob_420: 420px;
 $r_mob_360: 360px;
 $r_minmob: 320px;
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: $font-manrope;
+	font-weight: 300;
+	font-size: 1.4rem;
+	color: $font-color;
+}
+
+hr {
+	display: block;
+	width: 100%;
+	height: 1px;
+	background-color: #F1F3F6;
+}
+
+.none {
+	display: none;
+}
+
+.container {
+	max-width: $container-width;
+	padding: 0rem $container-padding;
+	margin: 0 auto;
+}
+
+.line {
+	display: flex;
+	align-items: center;
+
+	&__vertical {
+		&::after {
+			content: '';
+			display: block;
+			width: 0.1rem;
+			height: 0.9rem;
+			background-color: $font-colorGrey;
+			margin: 0rem 1.1rem;
+		}
+	}
+}
+
+//FONTS
+.font-grey {
+	color: $font-colorGrey;
+
+	&_medium {
+		font-weight: 500;
+	}
+}
+
+.font-basic {
+	&_bold {
+		font-weight: 700;
+	}
+}
+
+// HEADER
+.header-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0rem .8rem;
+
+	&__location {
+
+		&_town {
+			display: flex;
+			align-items: center;
+			// justify-content: center;
+			letter-spacing: -0.03em;
+			column-gap: .5rem;
+
+			&::before {
+				content: '';
+				display: block;
+				background-image: url(../images/header/location.svg);
+				width: 1.1rem;
+				height: 1.3rem;
+				background-size: 1.1rem 1.3rem;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&__table {
+		display: flex;
+		align-items: center;
+
+		&__network {
+			display: flex;
+			align-items: center;
+			column-gap: 1rem;
+
+			&_telegram {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+
+			&_vk {
+				width: 1.9rem;
+				height: 1.1rem;
+			}
+		}
+	}
+}
+
+.header-menu {
+	display: flex;
+	align-items: center;
+}

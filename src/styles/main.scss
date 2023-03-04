@@ -25,6 +25,7 @@ $r_mob_420: 420px;
 $r_mob_360: 360px;
 $r_minmob: 320px;
 
+//ВСПОМОГАТЕЛЬНЫЕ СТИЛИ
 html {
 	font-size: 10px;
 }
@@ -33,6 +34,7 @@ body {
 	font-family: $font-manrope;
 	font-weight: 300;
 	font-size: 1.4rem;
+	letter-spacing: -0.03em;
 	color: $font-color;
 }
 
@@ -51,6 +53,11 @@ hr {
 	max-width: $container-width;
 	padding: 0rem $container-padding;
 	margin: 0 auto;
+}
+
+.logo {
+	width: 21rem;
+	height: 3.2rem;
 }
 
 .line {
@@ -79,6 +86,10 @@ hr {
 }
 
 .font-basic {
+	&_semibold {
+		font-weight: 600;
+	}
+
 	&_bold {
 		font-weight: 700;
 	}
@@ -96,8 +107,6 @@ hr {
 		&_town {
 			display: flex;
 			align-items: center;
-			// justify-content: center;
-			letter-spacing: -0.03em;
 			column-gap: .5rem;
 
 			&::before {
@@ -138,4 +147,60 @@ hr {
 .header-menu {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	padding: 3rem 10rem 3rem 0rem;
+
+	&__nav {
+		// padding: 0rem 10.6rem 0rem 11.8rem;
+
+		&__items {
+			display: flex;
+			align-items: center;
+			column-gap: 3rem;
+
+			&__item {}
+		}
+	}
+
+	&__private {
+		display: flex;
+		align-items: center;
+		column-gap: 3rem;
+
+		&_person {
+			display: flex;
+			align-items: center;
+			column-gap: 1rem;
+
+			&::before {
+				content: '';
+				display: block;
+				background-image: url(../images/header/person-icon.svg);
+				width: 2rem;
+				height: 2rem;
+				background-size: 2rem 2rem;
+				background-position: center center;
+				background-repeat: no-repeat;
+
+			}
+		}
+
+		&_total {
+			display: flex;
+			align-items: center;
+			column-gap: 1rem;
+
+			&::before {
+				content: '';
+				display: block;
+				background-image: url(../images/header/basket-icon.svg);
+				width: 2rem;
+				height: 2rem;
+				background-size: 2rem 2rem;
+				background-position: center center;
+				background-repeat: no-repeat;
+
+			}
+		}
+	}
 }

@@ -5,11 +5,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="mstile" type="image/png" sizes="150x150" href="./images/favicon/mstile-150x150.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./images/favicon/android-chrome-256x256.png">
+	<link rel="icon" sizes="16x16" href="./images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Мельница пицца</title>
 </head>
 
 <body>
-	<header class="header">
+	<section class="subsection">
 		<div class="container">
 			<div class="header-info">
 				<div class="header-info__location">
@@ -37,6 +47,10 @@
 					</li>
 				</ul>
 			</div>
+		</div>
+	</section>
+	<header class="header">
+		<div class="container">
 			<hr>
 			<div class="header-menu font-basic_semibold">
 				<div class="logo">
@@ -46,7 +60,7 @@
 				</div>
 				<nav class="header-menu__nav">
 					<ul class="header-menu__nav__items">
-						<li><a class="header-menu__nav__item" href="#!">Главная</a></li>
+						<li><a class="header-menu__nav__item active-link" href="#!">Главная</a></li>
 						<li><a class="header-menu__nav__item" href="#!">Пицца</a></li>
 						<li><a class="header-menu__nav__item" href="#!">Бургеры</a></li>
 						<li><a class="header-menu__nav__item" href="#!">Закуски</a></li>
@@ -64,6 +78,80 @@
 			<hr>
 		</div>
 	</header>
+	<!-- ***************************************************************************** -->
+	<main>
+		<div id="app">
+			<section class="banner">
+				<div class="container">
+					<div class="swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide swiper-slide__1 banner-slaid banner-slaid__1">
+								<div class="banner-slaid banner-slaid__1">
+									<h1 class="font-white font-white_extrabold">Скидка 10&#37;</h1>
+									<p class="banner-slaid__1_label font-basic_extrabold">при заказе любых 3 пицц</p>
+									<p class="breadcrumbs font-white font-white_extrabold">
+										&#42; Скидка распространяется только на покупку пицц . Подробности уточняйте по телефону +7 (495)
+										182-22-16
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide swiper-slide__2 banner-slaid banner-slaid__2">Slide 2</div>
+							<div class="swiper-slide swiper-slide__3 banner-slaid banner-slaid__3">Slide 3</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="main-menu">
+				<div class="container">
+					<div class="grid">
+						<div class="grid__card">
+							<div class="grid__card__product">
+								<div class="grid__cover">
+									<img src="./images/main/pizza/smoked.jpg" alt="Копченая говядина спайси" class="grid__cover_img">
+								</div>
+								<div class="grid__card__product__desc">
+									<h3 class="grid__card__product__desc__title font-basic_bold">
+										Пицца «Копчёная говядина спайси»
+									</h3>
+									<p class="grid__card__product__desc__compound font-basic_light">
+										Сыр Моцарелла, Копченая говядина, Куриное филе, Бекон, Охотничьи колбаски, Помидоры, Лук красный,
+										Соус Спайси
+									</p>
+									<div class="grid__card__product__desc__data font-basic_semibold">
+										<span class="grid__card__product__desc__data_weight">680 г</span>
+										<span class="grid__card__product__desc__data_ckal">1 332 ккал</span>
+									</div>
+								</div>
+							</div>
+							<div class="grid__card__order">
+								<span class="grid__card__order_price font-basic_extrabold">830 &#8381;</span>
+								<span class="grid__card__order_cart"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="recomed">
+				<div class="container"></div>
+			</section>
+			<section class="advantages">
+				<div class="container"></div>
+			</section>
+			<section class="about-delivery">
+				<div class="container"></div>
+			</section>
+		</div>
+	</main>
+	<!-- ***************************************************************************** -->
+	<footer class="footer">
+		<section class="questionnaire">
+			<div class="container"></div>
+		</section>
+	</footer>
 </body>
 
 </html>

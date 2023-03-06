@@ -3,6 +3,8 @@
 $font-manrope: 'Manrope', sans-serif;
 $font-color: #420F04;
 $font-colorGrey: #828D9E;
+$font-colorYellow: #F6CD46;
+$font-colorWhite: #FFFFFF;
 $container-width: 1390px;
 $container-padding: 15px;
 
@@ -34,7 +36,7 @@ body {
 	font-family: $font-manrope;
 	font-weight: 300;
 	font-size: 1.4rem;
-	letter-spacing: -0.03em;
+	letter-spacing: -0.05em;
 	color: $font-color;
 }
 
@@ -76,16 +78,139 @@ hr {
 	}
 }
 
+.active-link {
+	color: $font-colorYellow !important;
+}
+
+.breadcrumbs {
+	max-width: 440px;
+	font-size: 1.4rem;
+	line-height: 1.9rem;
+}
+
+// GRID
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+	gap: 2rem;
+	margin-bottom: 2rem;
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border: 1px solid #E2E5EA;
+		border-radius: 1rem;
+		padding: 3rem 2.4rem 2.8rem;
+		height: 51.5rem;
+
+		&__product {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1.9rem;
+
+			&__desc {
+				&__title {
+					font-size: 2.4rem;
+					line-height: 3rem;
+				}
+
+				&__compound {
+					font-size: 1.4rem;
+					line-height: 1.9rem;
+					margin-top: 1rem;
+				}
+
+				&__data {
+					display: flex;
+					align-items: center;
+					margin-top: 1rem;
+
+					&_weight {
+						display: flex;
+						align-items: center;
+
+						&::after {
+							content: '';
+							display: block;
+							width: 0.1rem;
+							height: 0.9rem;
+							background-color: #E2E5EA;
+							margin: 0rem 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		&__order {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&_price {
+				font-size: 2.4rem;
+				line-height: 3.3rem;
+			}
+
+			&_cart {
+				background-image: url(../images/main/cart-white.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $font-color;
+				padding: 1.7rem 2.2rem;
+				border-radius: 1rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__cover {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		&_img {
+			width: 100%;
+			height: 23.5rem;
+			max-width: 23.5rem;
+			object-fit: contain;
+		}
+	}
+}
+
 //FONTS
+.font-white {
+	color: $font-colorWhite;
+
+	&_extrabold {
+		font-weight: 800;
+	}
+}
+
 .font-grey {
-	color: $font-colorGrey;
+	color: $font-colorGrey !important;
 
 	&_medium {
 		font-weight: 500;
 	}
 }
 
+.font-yellow {
+	color: $font-colorYellow !important;
+
+	&_extrabold {
+		font-weight: 800;
+	}
+}
+
 .font-basic {
+	&_light {
+		font-weight: 300;
+	}
+
 	&_semibold {
 		font-weight: 600;
 	}
@@ -93,9 +218,19 @@ hr {
 	&_bold {
 		font-weight: 700;
 	}
+
+	&_extrabold {
+		font-weight: 800;
+	}
 }
 
 // HEADER
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 9999;
+}
+
 .header-info {
 	display: flex;
 	align-items: center;
@@ -118,6 +253,7 @@ hr {
 				background-size: 1.1rem 1.3rem;
 				background-position: center center;
 				background-repeat: no-repeat;
+				margin: 0.6rem 0.5rem;
 			}
 		}
 	}
@@ -146,12 +282,13 @@ hr {
 
 .header-menu {
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
-	padding: 3rem 10rem 3rem 0rem;
+	padding: 3rem 5rem 3rem 0rem;
+	background-color: #fff;
 
 	&__nav {
-		// padding: 0rem 10.6rem 0rem 11.8rem;
 
 		&__items {
 			display: flex;
@@ -165,6 +302,7 @@ hr {
 	&__private {
 		display: flex;
 		align-items: center;
+		padding-right: 1.6rem;
 		column-gap: 3rem;
 
 		&_person {
@@ -203,4 +341,156 @@ hr {
 			}
 		}
 	}
+}
+
+//BANNER
+.banner {
+	padding: 4rem 0rem 1rem;
+}
+
+//slider
+.swiper {
+	border-radius: 1rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url(../images/banner/fav-banner.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 54.4rem;
+		height: 54.4rem;
+		bottom: -13rem;
+		left: -4rem;
+		z-index: 1;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/main/logo_sushi-chef.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		transform: rotate(-30deg);
+		width: 9.5rem;
+		height: 9.5rem;
+		bottom: 3.8rem;
+		right: 2.7rem;
+		z-index: 2;
+	}
+}
+
+.swiper-slide {
+	width: 100%;
+	height: 63.4rem;
+
+	&__1 {
+		background-image: url(../images/banner/Image1.jpg);
+	}
+
+	&__2 {
+		background-image: url(../images/banner/Image2.jpg);
+	}
+
+	&__3 {
+		background-image: url(../images/banner/Image3.jpg);
+	}
+}
+
+.swiper-pagination {
+	padding-bottom: 4rem;
+}
+
+.swiper-pagination-bullet {
+	opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 14px);
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+	width: 1.2rem;
+	height: 1.2rem;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+	position: relative;
+	width: 0.8rem !important;
+	height: 0.8rem !important;
+	background: #FFFFFF !important;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 2.4rem;
+		height: 2.4rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 2px solid #000000;
+		border-radius: 50%;
+		border: 2px solid #FFFFFF;
+	}
+}
+
+.banner-slaid {
+	display: flex;
+	flex-direction: column;
+
+	&__1 {
+		position: relative;
+		row-gap: 42.6rem;
+		font-size: 7.6rem;
+		line-height: 7rem;
+		padding: 3rem 0rem 4rem 2.4rem;
+
+		&_label {
+			position: absolute;
+			display: inline-block;
+			font-size: 2.4rem;
+			line-height: 3.3rem;
+			top: 12rem;
+			left: 25rem;
+			padding: 5px 10px;
+			background-color: #F6CD46;
+			border-radius: 10px;
+			transform: rotate(-3.71deg);
+		}
+	}
+
+	&__2 {}
+
+	&__3 {}
+}
+
+// MAIN-MENU
+.main-menu {
+	padding: 1rem 0rem 6.1rem;
+}
+
+// RECOMEND
+.recomed {
+	padding: 6.1rem 0rem 4.4rem;
+}
+
+// ADVANTAGES
+.advantages {
+	padding: 4.4rem 0rem 2.5rem;
+}
+
+// ABOUT-DELIVERY
+.about-delivery {
+	padding: 2.5rem 0rem 3rem;
+}
+
+// FOOTER
+.footer {
+	padding-top: 3rem;
+}
+
+.questionnaire {
+	padding-bottom: 2.5rem;
 }
